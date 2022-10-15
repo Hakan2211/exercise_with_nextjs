@@ -4,7 +4,6 @@ import Image from "next/image";
 const User = () => {
   const { data: session } = useSession();
   if (session) {
-    console.log(session.user, "image");
     return (
       <>
         <button className="rounded-full hover:bg-gray-200 cursor-pointer p-1">
