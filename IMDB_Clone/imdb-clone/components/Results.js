@@ -1,7 +1,9 @@
-const Results = () => {
+const Results = ({ results }) => {
   return (
     <div>
-      <p>Results</p>
+      {results.map((result) => (
+        <h1 key={result.link}>{result.title}</h1>
+      ))}
     </div>
   );
 };
