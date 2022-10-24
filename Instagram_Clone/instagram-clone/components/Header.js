@@ -1,9 +1,10 @@
 import Image from "next/image";
-import { SearchIcon } from "@heroicons/react/outline";
+import { SearchIcon, PlusCircleIcon } from "@heroicons/react/outline";
+import { HomeIcon } from "@heroicons/react/solid";
 
 const Header = () => {
   return (
-    <div className="flex items-center justify-between max-w-6xl">
+    <div className="flex items-center justify-between max-w-6xl mx-4 xl:mx-auto">
       {/* Left */}
       <div className="h-24 w-24 relative hidden lg:inline-grid cursor-pointer">
         <Image
@@ -33,7 +34,15 @@ const Header = () => {
         />
       </div>
       {/* Right */}
-      <h1>Right</h1>
+      <div className="flex space-x-4 items-center">
+        <HomeIcon className="hidden md:inline-flex h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
+        <PlusCircleIcon className="h-6 cursor-pointer hover:scale-125 transition-transform duration-200 ease-out" />
+        <img
+          src="https://image.gala.de/20078934/t/08/v16/w1440/r1/-/steve-jobs--4830684-.jpg"
+          alt="user image"
+          className="h-10 rounded-full cursor-pointer"
+        />
+      </div>
     </div>
   );
 };
